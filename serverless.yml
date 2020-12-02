@@ -1,0 +1,12 @@
+service: corona-scraper
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  corona:
+    handler: handler.invoke
+    events:
+      - httpApi: "*"
